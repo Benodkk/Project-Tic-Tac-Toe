@@ -86,7 +86,7 @@ field.forEach(action => {
 
 //checks if game should stop 
 function checkWinner(){
-    if (gameboard.moves[0]!='' && gameboard.moves[1]!='' && gameboard.moves[2]!='' && gameboard.moves[3]!='' && gameboard.moves[4]!='' && gameboard.moves[5]!='' && gameboard.moves[6]!='' && gameboard.moves[7]!='' && gameboard.moves[28]!=''){
+    if (gameboard.moves[0]!='' && gameboard.moves[1]!='' && gameboard.moves[2]!='' && gameboard.moves[3]!='' && gameboard.moves[4]!='' && gameboard.moves[5]!='' && gameboard.moves[6]!='' && gameboard.moves[7]!='' && gameboard.moves[8]!=''){
         weHaveTheWinner=2
     }
     if (gameboard.moves[0]==gameboard.moves[1] && gameboard.moves[1]==gameboard.moves[2] && gameboard.moves[0]!=''){
@@ -129,10 +129,9 @@ function checkWinner(){
 }
 
 function gameStop() {
-    if (weHaveTheWinner==1){
+    if (weHaveTheWinner==1 ^ weHaveTheWinner==2){
     return whoseMove=2}
 }
-
 
 newGame.addEventListener('click', () => {
     gameboard.moves=['','','','','','','','',''];
